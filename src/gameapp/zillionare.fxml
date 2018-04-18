@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameapp.gameController">
+
+    <children>
+        <Button fx:id="loginButton" layoutX="112.0" layoutY="102.0" mnemonicParsing="false" onAction="#show_question" prefHeight="25.0" prefWidth="102.0" text="show" />
+        <Label fx:id="result" layoutX="28.0" layoutY="282.0" prefHeight="17.0" prefWidth="282.0" text="result" />
+        <Label fx:id="loginstatus" layoutX="35.0" layoutY="155.0" />
+      <Label fx:id="q_desc" layoutX="62.0" layoutY="147.0" prefHeight="17.0" prefWidth="236.0" text="question" />
+
+        <fx:define>
+            <ToggleGroup fx:id="toggleGroupAnswers" />
+        </fx:define>
+      <RadioButton fx:id="ans1" layoutX="42.0" layoutY="181.0" mnemonicParsing="false" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroupAnswers" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="ans2" layoutX="42.0" layoutY="209.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroupAnswers" />
+      <RadioButton fx:id="ans3" layoutX="188.0" layoutY="181.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroupAnswers" />
+      <RadioButton fx:id="ans4" layoutX="189.0" layoutY="208.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroupAnswers" />
+
+
+        <Button fx:id="submit" layoutX="121.0" layoutY="239.0" mnemonicParsing="false" onAction="#submit_answer" prefHeight="25.0" prefWidth="87.0" text="submit" />
+
+        <fx:define>
+            <ToggleGroup fx:id="Categories" />
+        </fx:define>
+
+        <RadioButton fx:id="category1" layoutX="28.0" layoutY="70.0" mnemonicParsing="false" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="Categories" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="category2" layoutX="126.0" layoutY="70.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$Categories" />
+      <RadioButton fx:id="category3" layoutX="223.0" layoutY="70.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$Categories" />
+      <Label layoutX="28.0" layoutY="332.0" text="help" />
+      <RadioButton fx:id="helpPublic" layoutX="101.0" layoutY="332.0" mnemonicParsing="false" onAction="#helpPublicSelected" text="get help from public" />
+      <RadioButton fx:id="helpHalf" layoutX="101.0" layoutY="371.0" mnemonicParsing="false" onAction="#helpHalfSelected" text="half &amp; half" />
+      <Button layoutX="119.0" layoutY="409.0" mnemonicParsing="false" onAction="#getHelp" text="get Help" />
+    </children>
+</AnchorPane>
